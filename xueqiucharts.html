@@ -3,15 +3,27 @@
 <head>
 	<script src="jquery-3.5.1.min.js"></script>
 	<script src="iframecontent.js"></script>
-	<script>
-		$(function(){
-			//sina_ihfc("IHDY");
-		});
-	</script>
 	<link rel="stylesheet" type="text/css" href="focus.css">
 </head>
 <body>
-	<iframe class="sina_ihific_content" scrolling="no" src="https://finance.sina.com.cn/futures/quotes/IH2106.shtml">
-	</iframe>
+	<div class="focus">
+		<table>
+			<thead>
+			</thead>
+			<tbody class="chartstable">
+				<tr>
+					<td>
+						<iframe class="sina_ihific_wrapper" scrolling="no" src="sina_IHDY.html">
+						</iframe>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </body>
-<html>
+<script>
+		$(function(){
+			xueqiucharts2cols();
+		});
+</script>
+</html>
