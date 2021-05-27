@@ -66,11 +66,11 @@ function xueqiucharts2cols(){
 			html += "<td>";
 			html += "<iframe class=\"xueqiu_kline_wrapper\" scrolling=\"no\" src=\"" + urls[i] + "\">";
 			html += "</iframe>";
-			html += "</tr>";
+			html += "</td>";
 			
 			if(i%2==1 || i == urls.length-1)
 			{
-				html += "</td>";
+				html += "</tr>";
 			}
 		}
 		console.log(html);
