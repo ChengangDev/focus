@@ -1,3 +1,11 @@
+iframe.debug_content {
+	border: 0px none; 
+	margin-left: 0px; 
+	height: 800px; 
+	margin-top: 0px; 
+	width: 1280px;
+}
+
 iframe.sina_ihific_content {
 	border: 0px none; 
 	margin-left: -216px; 
@@ -22,10 +30,10 @@ iframe.eastmoney_hsgt_content {
 
 iframe.xueqiu_kline_content {
 	border: 0px none; 
-	margin-left: -216px; 
-	height: 981px; 
-	margin-top: -543px; 
-	width: 747px;
+	margin-left: -190px; 
+	height: 720px; 
+	margin-top: -100px; 
+	width: 830px;
 }
 
 iframe.xueqiu_kline_wrapper {
@@ -33,3 +41,5 @@ iframe.xueqiu_kline_wrapper {
 	height: 581px; 
 	width: 500px;
 }
+
+
