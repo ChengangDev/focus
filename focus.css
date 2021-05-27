@@ -30,7 +30,7 @@ iframe.eastmoney_hsgt_content {
 
 iframe.xueqiu_kline_content {
 	border: 0px none; 
-	margin-left: -190px; 
+	margin-left: -192px; 
 	height: 720px; 
 	margin-top: -100px; 
 	width: 830px;
@@ -38,8 +38,8 @@ iframe.xueqiu_kline_content {
 
 iframe.xueqiu_kline_wrapper {
 	border: 1px black; 
-	height: 581px; 
-	width: 500px;
+	height: 681px; 
+	width: 645px;
 }
 
 
