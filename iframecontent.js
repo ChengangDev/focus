@@ -1,7 +1,7 @@
 
 
 function sina_ihfc(type){
-	$.get("http://vip.stock.finance.sina.com.cn/quotes_service/api/json_v2.php/Market_Center.getNameList?page=1&num=80&sort=symbol&asc=1&node=szgz_qh&_s_r_a=init", function(data){
+	$.get("https://vip.stock.finance.sina.com.cn/quotes_service/api/json_v2.php/Market_Center.getNameList?page=1&num=80&sort=symbol&asc=1&node=szgz_qh&_s_r_a=init", function(data){
 		console.log(JSON.stringify(data));
 		var month = type.substring(2);
 		var symbol = type.substring(0, 2);
