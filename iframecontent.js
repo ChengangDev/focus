@@ -22,7 +22,9 @@ function sina_ihfc(type){
 function xueqiu(){
 	var arr = document.URL.split("/");
 	var symbol = arr[arr.length-1];
-	symbol = symbol.replace("xueqiu_", "").replace(".html", "");
+	symbol = symbol.replace(".html", "");
+	symbol = symbol.replace("xueqiu_", "");
+	symbol = symbol.replace("xueqiuetf_", "");
 	console.log(symbol);
 	var mkt = "SH";
 	if(parseInt(symbol) < 500000)
@@ -34,7 +36,7 @@ function xueqiu(){
 	//alert(url);
 }
 
-function xueqiucharts2cols(){
+function xueqiucharts2cols(starts){
 	//https://api.github.com/repos/chengangdev/focus/git/trees/main
 	$.get("https://api.github.com/repos/chengangdev/focus/git/trees/main", function(data){
 		console.log(JSON.stringify(data));
@@ -45,7 +47,8 @@ function xueqiucharts2cols(){
 		{
 			//console.log(JSON.stringify(f));
 			var path = f["path"];
-			if(path.match("^xueqiu_") && path.match("html$"))
+			var pattern = "^" + starts;
+			if(path.match(pattern) && path.match("html$"))
 			{
 				//console.log(path);
 				path = path.replace(".html", "");
