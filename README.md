@@ -1,5 +1,6 @@
 # Focus
 # chrome://flags samesite disabled
+# 改用Firefox
 ## 复制xueqiu_510050.html并改名
 
 ### https://chengangdev.github.io/Focus/
