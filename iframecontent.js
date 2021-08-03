@@ -82,3 +82,74 @@ function xueqiucharts2cols(starts){
 		console.log($("tbody"));
 	});
 }
+
+function components(type){
+	var headers = {
+		"SECURITY_CODE":"SEC_CODE",
+		"SECURITY_NAME_ABBR":"SEC_NAME",
+		"CLOSE_PRICE":"SEC_CLOSE",
+		"INDUSTRY":"SEC_INDUSTRY",
+		"REGION":"SEC_REGION",
+		"WEIGHT":"WEIGHT",
+		"EPS":"EPS",
+		"BPS":"BPS",
+		"ROE":"ROE",
+		"TOTAL_SHARES":"TOTAL",
+		"FREE_SHARES":"FREE",
+		"FREE_CAP":"FREE_CAP",
+		"f2":"SEC_PRICE",
+		"f3":"INCREASE",
+	};
+	//https://datacenter-web.eastmoney.com/api/data/v1/get?sortColumns=WEIGHT&sortTypes=-1&pageSize=500&pageNumber=1&reportName=RPT_INDEX_TS_COMPONENT&columns=SECURITY_CODE%2CSECURITY_NAME_ABBR%2CCLOSE_PRICE%2CINDUSTRY%2CREGION%2CWEIGHT%2CEPS%2CBPS%2CROE%2CTOTAL_SHARES%2CFREE_SHARES%2CFREE_CAP&quoteColumns=f2%2Cf3&source=WEB&client=WEB&filter=(TYPE%3D%224%22)
+	$.get("https://datacenter-web.eastmoney.com/api/data/v1/get?sortColumns=WEIGHT&sortTypes=-1&pageSize=500&pageNumber=1&reportName=RPT_INDEX_TS_COMPONENT&columns=SECURITY_CODE%2CSECURITY_NAME_ABBR%2CCLOSE_PRICE%2CINDUSTRY%2CREGION%2CWEIGHT%2CEPS%2CBPS%2CROE%2CTOTAL_SHARES%2CFREE_SHARES%2CFREE_CAP&quoteColumns=f2%2Cf3&source=WEB&client=WEB&filter=(TYPE%3D%22"+type+"%22)", function(data){
+		//console.log(data);
+		var result = JSON.parse(data);
+		var coms = result["result"]["data"];
+		//console.log(JSON.stringify(coms));
+		var html = "";
+		for(i in coms)
+		{
+			var sec = coms[i];
+			if(i == 0)
+			{
+				html += "<thead><tr>";
+				for(col in sec)
+				{
+					html += "<th>" + headers[col] + "</th>";
+				}
+				html += "</tr></thead>";
+				html += "<tbody>";
+			}
+			
+			html += "<tr>";
+			for(col in sec)
+			{
+				if(col == "SECURITY_CODE")
+				{
+					var mkt = "SH";
+					if(parseInt(sec[col]) < 500000)
+						mkt = "SZ";
+					var url = "https://xueqiu.com/S/" + mkt + sec[col]; //https://xueqiu.com/S/SH510050
+					html += "<td><a target=\"_blank\" href=\"" + url + "\">" + sec[col] + "</a></td>";
+				}
+				else
+				{
+					html += "<td>" + sec[col] + "</td>";
+				}
+			}
+			html += "</tr>";
+			
+		}
+		html += "</tbody>";
+		//console.log(html);
+		//console.log($("table"));
+		$("table").html(html);
+		//console.log($("table"));
+	});
+}
+
+function selectIndex()
+{
+	var x = document.getElementById("index").value;
+	components(x);
+}
