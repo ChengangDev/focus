@@ -3,28 +3,28 @@
     "start": "2021-10-19",
     "end": "2021-11-07",
     "type": "4.game",
-    "short": "5.¿¿Ç°¸´Ï°",
-    "long": "WORK:\n a.Ö»¹ØÄşÒ»Ìõ\n b.°ÚÌ¯\n c.Õ½³¡"
+    "short": "5.é å‰å¤ä¹ ",
+    "long": "WORK:\n a.åªå…³å®ä¸€æ¡\n b.æ‘†æ‘Š\n c.æˆ˜åœº"
   },
   {
     "start": "2021-08-01",
     "end": "2021-11-07",
     "type": "4.game",
-    "short": "5.ÏµÍ³¼Ü¹¹Éè¼ÆÊ¦",
+    "short": "5.ç³»ç»Ÿæ¶æ„è®¾è®¡å¸ˆ",
     "long": "WORK:\n a.c++\n b.python\n c.javascript"
   },
   {
     "start": "2021-08-01",
     "end": "2021-11-07",
     "type": "2.study",
-    "short": "5.ÏµÍ³¼Ü¹¹Éè¼ÆÊ¦",
+    "short": "5.ç³»ç»Ÿæ¶æ„è®¾è®¡å¸ˆ",
     "long": "WORK:\n a.c++\n b.python\n c.javascript"
   },
    {
     "start": "2021-08-01",
     "end": "2021-11-07",
     "type": "3.tour",
-    "short": "5.ÏµÍ³¼Ü¹¹Éè¼ÆÊ¦",
+    "short": "5.ç³»ç»Ÿæ¶æ„è®¾è®¡å¸ˆ",
     "long": "WORK:\n a.c++\n b.python\n c.javascript"
   },
   {
@@ -34,4 +34,5 @@
     "short": "5.Hello world",
     "long": "WORK:\n a.c++\n b.python\n c.javascript"
   }
+  
 ]
