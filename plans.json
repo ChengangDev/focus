@@ -1,0 +1,37 @@
+[
+  {
+    "start": "2021-10-19",
+    "end": "2021-11-07",
+    "type": "4.game",
+    "short": "5.靠前复习",
+    "long": "WORK:\n a.只关宁一条\n b.摆摊\n c.战场"
+  },
+  {
+    "start": "2021-08-01",
+    "end": "2021-11-07",
+    "type": "4.game",
+    "short": "5.系统架构设计师",
+    "long": "WORK:\n a.c++\n b.python\n c.javascript"
+  },
+  {
+    "start": "2021-08-01",
+    "end": "2021-11-07",
+    "type": "2.study",
+    "short": "5.系统架构设计师",
+    "long": "WORK:\n a.c++\n b.python\n c.javascript"
+  },
+   {
+    "start": "2021-08-01",
+    "end": "2021-11-07",
+    "type": "3.tour",
+    "short": "5.系统架构设计师",
+    "long": "WORK:\n a.c++\n b.python\n c.javascript"
+  },
+  {
+    "start": "2021-01-01",
+    "end": "2021-01-03",
+    "type": "1.work",
+    "short": "5.Hello world",
+    "long": "WORK:\n a.c++\n b.python\n c.javascript"
+  }
+]
