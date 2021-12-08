@@ -1,35 +1,77 @@
 [
   {
+    "start": "2021-12-08",
+    "end": "2021-12-31",
+    "type": "work",
+    "short": "1.规划测量",
+    "long": "WORK:\na.加密\nb.提取单体"
+  },
+  {
+    "start": "2021-12-08",
+    "end": "2021-12-31",
+    "type": "work",
+    "short": "2.机器人",
+    "long": "WORK:\na.模拟器\nb.启动"
+  },
+  {
+    "start": "2021-12-08",
+    "end": "2021-12-15",
+    "type": "game",
+    "short": "2.一组签到小号",
+    "long": "WORK:\n"
+  },
+  {
+    "start": "2021-12-08",
+    "end": "2022-06-08",
+    "type": "game",
+    "short": "1.大号到137等级",
+    "long": "WORK:\n"
+  },
+  {
+    "start": "2021-12-08",
+    "end": "2021-12-31",
+    "type": "study",
+    "short": "1.深度学习课程",
+    "long": "WORK:\n"
+  },
+  {
+    "start": "2021-12-08",
+    "end": "2022-06-15",
+    "type": "study",
+    "short": "2.考证",
+    "long": "WORK:\n"
+  },
+  {
     "start": "2021-10-19",
-    "end": "2021-12-17",
+    "end": "2021-12-01",
     "type": "game",
     "short": "5.靠前复习",
     "long": "WORK:\n a.只关宁一条\n b.摆摊\n c.战场"
   },
   {
     "start": "2021-11-30",
-    "end": "2021-12-27",
+    "end": "2021-12-01",
     "type": "game",
     "short": "5.系统架构设计师",
     "long": "WORK:\n a.c++\n b.python\n c.javascript"
   },
   {
-    "start": "2021-09-01",
-    "end": "2022-05-07",
+    "start": "2020-09-01",
+    "end": "2021-05-07",
     "type": "study",
     "short": "5.系统架构设计师",
     "long": "WORK:\n a.c++\n b.python\n c.javascript"
   },
    {
-    "start": "2021-08-01",
-    "end": "2021-12-17",
+    "start": "2020-08-01",
+    "end": "2020-12-17",
     "type": "tour",
     "short": "5.系统架构设计师",
     "long": "WORK:\n a.c++\n b.python\n c.javascript"
   },
   {
-    "start": "2021-12-01",
-    "end": "2021-12-03",
+    "start": "2020-12-01",
+    "end": "2020-12-03",
     "type": "work",
     "short": "5.Hello world",
     "long": "WORK:\n a.c++\n b.python\n c.javascript"
