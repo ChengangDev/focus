@@ -7,8 +7,8 @@
     "long": "WORK:\n a.只关宁一条\n b.摆摊\n c.战场"
   },
   {
-    "start": "2021-11-01",
-    "end": "2022-11-07",
+    "start": "2021-11-30",
+    "end": "2021-12-27",
     "type": "game",
     "short": "5.系统架构设计师",
     "long": "WORK:\n a.c++\n b.python\n c.javascript"
@@ -22,14 +22,14 @@
   },
    {
     "start": "2021-08-01",
-    "end": "2021-11-07",
+    "end": "2021-12-17",
     "type": "tour",
     "short": "5.系统架构设计师",
     "long": "WORK:\n a.c++\n b.python\n c.javascript"
   },
   {
-    "start": "2021-01-01",
-    "end": "2021-01-03",
+    "start": "2021-12-01",
+    "end": "2021-12-03",
     "type": "work",
     "short": "5.Hello world",
     "long": "WORK:\n a.c++\n b.python\n c.javascript"
