@@ -110,14 +110,17 @@
 							html += "<td class=\"\"></td>";
 						else
 						{
+							var cls = tasks[i]["type"];
+							if(k+start_day == 0)
+								cls = " today";
 							if(nFill < tasks[i]["short"].length)
 							{
-								html += "<td class=\"" + tasks[i]["type"] + "\">" + tasks[i]["short"][nFill] + "</td>";
+								html += "<td class=\"" + cls + "\">" + tasks[i]["short"][nFill] + "</td>";
 								nFill++;
 							}
 							else
 							{
-								html += "<td class=\"" + tasks[i]["type"] + "\"></td>";
+								html += "<td class=\"" + cls + "\"></td>";
 							}
 						}
 					}
@@ -154,28 +157,32 @@
 		}
 		.now{
 		    text-align: center;
-			border-top: 4px solid #FFDC00;
+			border-top: 8px solid #FF851B;
 			background-color: #FFDC00
+		}
+		.today{
+		    text-align: center;
+			border-bottom: 7px solid #FF851B
 		}
 		.study{
 		    text-align: center;
-			border-bottom: 3px solid #FFDC00
+			border-bottom: 4px solid #FFDC00
 		}
 		.game{
 		    text-align: center;
-			border-bottom: 3px solid #7FDBFF
+			border-bottom: 4px solid #7FDBFF
 		}
 		.work{
 		    text-align: center;
-			border-bottom: 3px solid #FF4136
+			border-bottom: 4px solid #FF4136
 		}
 		.tour{
 		    text-align: center;
-			border-bottom: 3px solid #01FF70
+			border-bottom: 4px solid #01FF70
 		}
 		.weekend{
 		    text-align: center;
-			border-bottom: 1px solid #FF851B
+			border-bottom: 2px solid #FF851B
 		}
 	</style>
 </head>
