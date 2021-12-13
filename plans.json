@@ -56,29 +56,8 @@
     "long": "WORK:\n a.只关宁一条\n b.摆摊\n c.战场"
   },
   {
-    "start": "2021-11-30",
-    "end": "2021-12-01",
-    "type": "game",
-    "short": "5.系统架构设计师",
-    "long": "WORK:\n a.c++\n b.python\n c.javascript"
-  },
-  {
-    "start": "2020-09-01",
-    "end": "2021-05-07",
-    "type": "study",
-    "short": "5.系统架构设计师",
-    "long": "WORK:\n a.c++\n b.python\n c.javascript"
-  },
-   {
-    "start": "2020-08-01",
-    "end": "2020-12-17",
-    "type": "tour",
-    "short": "5.系统架构设计师",
-    "long": "WORK:\n a.c++\n b.python\n c.javascript"
-  },
-  {
-    "start": "2020-12-01",
-    "end": "2020-12-03",
+    "start": "2020-11-01",
+    "end": "2020-11-03",
     "type": "work",
     "short": "5.Hello world",
     "long": "WORK:\n a.c++\n b.python\n c.javascript"
