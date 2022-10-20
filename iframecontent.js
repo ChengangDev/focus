@@ -52,7 +52,7 @@ function xueqiucharts2cols(starts){
 			{
 				//console.log(path);
 				path = path.replace(".html", "");
-				var url = "https://chengangdev.github.io/Focus/" + path;
+				var url = "https://chengangdev.github.io/focus/" + path;
 				urls.push(url);
 			}
 		}
