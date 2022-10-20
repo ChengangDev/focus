@@ -8,23 +8,52 @@
 		function showSprint()
 		{
 			var sprints = [
-				{"name":"", "end":""},
+				{"name":"软考", "end":"2022-11-07"},
 				{}
 				];
+				
+			var end = sprints[0]["end"];
+			var name = sprints[0]["name"];
+			
+			document.getElementById("name").innerHTML = name;
+			
+			var one_day_time = 1000 * 3600 * 24;
+			var one_hour_time = 1000 * 3600;
+			var one_minute_time = 1000 * 60;
+			var today = new Date();
+			var endDay = new Date(end);
+			var timeDiff = endDay.getTime() - today.getTime();
+			if(timeDiff < 0)
+				timeDiff = 0;
+				
+			var days = timeDiff / one_day_time;
+			timeDiff = timeDiff % one_day_time;
+			var hours = timeDiff / one_hour_time;
+			timeDiff = timeDiff % one_hour_time;
+			var minute = timeDiff / one_minute_time;
+			timeDiff = timeDiff % one_minute_time;
+			var second = timeDiff / 1000;
+			
+			var text = parseInt(days) + "天" 
+			+ String(parseInt(hours)).padStart(2, '0') + "时" 
+			+ String(parseInt(minute)).padStart(2, '0') + "分" 
+			+ String(parseInt(second)).padStart(2, '0') + "秒";
+			document.getElementById("time").innerHTML = text;
+			//alert(document.getElementById("time").innerHTML);
 		}
 		
 		$(function(){
-			setInterval(showSprint, 1000);
-			
+			setInterval(function(){showSprint()}, 200);
+			//alert("111");
 		});
 	</script>
 	<style>
 	</style>
 </head>
 <body>
-    	<div style="text-align: center;">
-    		<h1>20天</h1>
-    		<h5>考试</h2>
+    <div style="text-align: center; padding: 100px">
+    	<h1 id="time">14天</h1>
+    	<h5 id="name">软考</h2>
 	</div>
 </body>
 <html>
