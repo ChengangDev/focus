@@ -3,14 +3,14 @@
 # 改用Firefox
 ## 复制xueqiu_510050.html并改名
 
-### https://chengangdev.github.io/Focus/
-### https://chengangdev.github.io/Focus/iframecontent.js
+### https://chengangdev.github.io/focus/
+### https://chengangdev.github.io/focus/iframecontent.js
 
-#### https://chengangdev.github.io/Focus/xueqiucharts
-#### https://chengangdev.github.io/Focus/xueqiuetfcharts
-#### https://chengangdev.github.io/Focus/sinacharts
-#### https://chengangdev.github.io/Focus/components
+#### https://chengangdev.github.io/focus/xueqiucharts
+#### https://chengangdev.github.io/focus/xueqiuetfcharts
+#### https://chengangdev.github.io/focus/sinacharts
+#### https://chengangdev.github.io/focus/components
 
-### https://chengangdev.github.io/Focus/plans
+### https://chengangdev.github.io/focus/plans
 
-### https://chengangdev.github.io/Focus/sprint
+### https://chengangdev.github.io/focus/sprint
