@@ -15,7 +15,11 @@
 			var end = sprints[0]["end"];
 			var name = sprints[0]["name"];
 			
+			var rand = Math.floor(Math.random() * sprints.length);
+			var tips = sprints[rand]["tips"];
+			
 			document.getElementById("name").innerHTML = name;
+			document.getElementById("tips").innerHTML = name + ":" + tips;
 			
 			var one_day_time = 1000 * 3600 * 24;
 			var one_hour_time = 1000 * 3600;
