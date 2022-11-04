@@ -5,21 +5,33 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script src="jquery-3.5.1.min.js"></script>
 	<script>
-		function showSprint()
+		function getSprints()
 		{
 			var sprints = [
 				{"name":"软考", "end":"2022-11-07", "tips":"论文花一周是可以搞定的"},
 				{"name":"软考", "end":"2022-11-07", "tips":"看完视频需要多刷题"}
 				];
+			return sprints;
+		}
+		
+		function showTips()
+		{
+			sprints = getSprints();
+			
+			var rand = Math.floor(Math.random() * sprints.length);
+			var name = sprints[rand]["name"];
+			var tips = sprints[rand]["tips"];
+			
+			document.getElementById("tips").innerHTML = name + ":" + tips;
+		}
+		
+		function showSprint()
+		{
+			sprints = getSprints();
 				
 			var end = sprints[0]["end"];
 			var name = sprints[0]["name"];
-			
-			var rand = Math.floor(Math.random() * sprints.length);
-			var tips = sprints[rand]["tips"];
-			
 			document.getElementById("name").innerHTML = name;
-			document.getElementById("tips").innerHTML = name + ":" + tips;
 			
 			var one_day_time = 1000 * 3600 * 24;
 			var one_hour_time = 1000 * 3600;
@@ -48,7 +60,9 @@
 		
 		$(function(){
 			showSprint();
+			showTips();
 			setInterval(function(){showSprint()}, 1000);
+			setInterval(function(){showTips()}, 5000);
 			//alert("111");
 		});
 	</script>
