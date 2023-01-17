@@ -82,6 +82,8 @@
 			var today = new Date();
 			var yesterday = new Date();
 			var year = today.getFullYear();
+			var month = today.getMonth();
+			var days = today.getDate();
 			
 			var task_bonus = 0;
 			var explore_bonus = 0;
@@ -101,7 +103,7 @@
 				for(var key in task)
 				{
 					task_bonus = task_bonus + task[key];
-					if( i == 0 )
+					if( date.getMonth() == month && date.getDate() == days )
 						task_inc = task_inc + task[key];
 				}
 				
@@ -110,7 +112,7 @@
 				for(var key in explore)
 				{
 					explore_bonus = explore_bonus + explore[key];
-					if( i == 0 )
+					if( date.getMonth() == month && date.getDate() == days )
 						explore_inc = task_inc + explore[key];
 				}
 			}
@@ -136,8 +138,8 @@
     <div style="text-align: center; padding: 80px">
     		<h1 id="time">14天</h1>
     		<h2 id="name">软考</h2>
-	    	<h4 id="task">task: 1 &uarr &br 1</h4>
-	        <h4 id="explore">explore: 99 &uarr &br 1</h4>
+	    	<h4 id="task">task: 1 &uarr; 1</h4>
+	        <h4 id="explore">explore: 99 &uarr; 1</h4>
 		<h6 id="tips"></h6>
     </div>
     <div style="text-align: center; padding: 1px">
