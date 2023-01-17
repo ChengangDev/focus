@@ -22,12 +22,12 @@
 				{
 					"date": "2023-1-17",
 					"task":{"早睡": 1,"早起": 1, "游戏":2, "家务":2, "锻炼":2},
-					"bonus":{}
+					"explore":{}
 				},
 				{
 					"date": "2023-1-16",
 					"task":{"早睡": 1,"早起": 1, "游戏":2, "家务":2, "锻炼":2},
-					"bonus":{}
+					"explore":{}
 				}
 			];
 			return bonus;
@@ -79,12 +79,50 @@
 		function showBonus()
 		{
 			var bonus = getBonus();
+			var today = new Date();
+			var yesterday = new Date();
+			var year = today.getFullYear();
+			var start = new Date();
+			start.setFullYear(year, 0, 1);
+			var one_day_time = 1000 * 3600 * 24;
+			var time_diff = today.getTime() - start.getTime();
+			yesterday.setTime(today.getTime() - one_day_time);
+			var days = timeDiff / one_day_time;
 			
-			var rand = Math.floor(Math.random() * sprints.length);
-			var name = sprints[rand]["name"];
-			var tips = sprints[rand]["tips"];
+			var task_bonus = 0;
+			var explore_bonus = 0;
+			var task_inc = 0;
+			var explore_inc = 0;
 			
-			document.getElementById("task").innerHTML = name + ":" + tips;
+			for(var i = 0; i < bonus.length; ++i)
+			{
+				var one = bonus[i];
+				var date = new Date(one["date"]);
+				if(date.getFullYear() != year)
+				{
+					console.log(JSON.stringify(one));
+					break;
+				}
+				var task = one["task"];
+				for(var key of of Object.keys(task))
+				{
+					task_bonus = task_bonus + task[key];
+					if( i == 0 )
+						task_inc = task_inc + task[key];
+				}
+				
+				
+				var explore = one["explore"];
+				for(var key of of Object.keys(explore))
+				{
+					explore_bonus = explore_bonus + explore[key];
+					if( i == 0 )
+						explore_inc = task_inc + explore[key];
+				}
+			}
+			
+			document.getElementById("task").innerHTML = "task: " + String(task_bonus) + " &uarr" + String(task_inc);
+			document.getElementById("explore").innerHTML = "explore: " + String(explore_bonus) + " &uarr" + String(explore_inc);
 		}
 		
 		$(function(){
@@ -104,8 +142,8 @@
     <div style="text-align: center; padding: 80px">
     		<h1 id="time">14天</h1>
     		<h2 id="name">软考</h2>
-	    	<h4 id="task">task:1/365&uarr&br1</h4>
-	        <h4 id="bonus">explore:99&uarr&br1</h4>
+	    	<h4 id="task">task: 1 &uarr &br 1</h4>
+	        <h4 id="explore">explore: 99 &uarr &br 1</h4>
 		<h6 id="tips"></h6>
     </div>
     <div style="text-align: center; padding: 1px">
