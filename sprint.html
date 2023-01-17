@@ -123,11 +123,12 @@
 		
 		$(function(){
 			showSprint();
-			
 			showTips();
-			setInterval(function(){showSprint()}, 1000);
-			setInterval(function(){showTips()}, 5000);
 			showBonus();
+			
+			setInterval(function(){showSprint()}, 1000);
+			setInterval(function(){showTips()}, 10000);
+			setInterval(function(){showBonus()}, 10000);
 			//alert("111");
 		});
 	</script>
