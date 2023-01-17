@@ -84,15 +84,16 @@
 			var name = sprints[rand]["name"];
 			var tips = sprints[rand]["tips"];
 			
-			document.getElementById("tips").innerHTML = name + ":" + tips;
+			document.getElementById("task").innerHTML = name + ":" + tips;
 		}
 		
 		$(function(){
 			showSprint();
-			showBonus();
+			
 			showTips();
 			setInterval(function(){showSprint()}, 1000);
 			setInterval(function(){showTips()}, 5000);
+			showBonus();
 			//alert("111");
 		});
 	</script>
@@ -103,8 +104,8 @@
     <div style="text-align: center; padding: 80px">
     		<h1 id="time">14天</h1>
     		<h2 id="name">软考</h2>
-	    	<h4 id="task">1/365&uarr1</h4>
-	        <h4 id="bonus">99&uarr1</h4>
+	    	<h4 id="task">task:1/365&uarr&br1</h4>
+	        <h4 id="bonus">explore:99&uarr&br1</h4>
 		<h6 id="tips"></h6>
     </div>
     <div style="text-align: center; padding: 1px">
