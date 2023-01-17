@@ -104,7 +104,7 @@
 					break;
 				}
 				var task = one["task"];
-				for(var key of of Object.keys(task))
+				for(var key in task)
 				{
 					task_bonus = task_bonus + task[key];
 					if( i == 0 )
@@ -113,7 +113,7 @@
 				
 				
 				var explore = one["explore"];
-				for(var key of of Object.keys(explore))
+				for(var key in explore)
 				{
 					explore_bonus = explore_bonus + explore[key];
 					if( i == 0 )
