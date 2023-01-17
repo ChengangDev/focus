@@ -8,18 +8,34 @@
 		function getSprints()
 		{
 			var sprints = [
-				{"name":"33-网络-并发-实验", "end":"2023-01-31", "tips":"珍惜每一秒钟"},
+				{"name":"网络-并发-实验", "end":"2023-01-31", "tips":"珍惜每一秒钟"},
 				{"name":"网络-并发-实验-概率论", "end":"2022-12-31", "tips":"学东西前先搞明白框架，目的和意义"},
 				{"name":"操作系统-概率论", "end":"2022-11-30", "tips":"晚上刷数学题会比较催眠"},
 				{"name":"软考", "end":"2022-11-07", "tips":"论文花一周是可以搞定的"},
 				{"name":"软考", "end":"2022-11-07", "tips":"看完视频需要多刷题"}
-				];
+			];
 			return sprints;
+		}
+		function getBonus()
+		{
+			var bonus = [
+				{
+					"date": "2023-1-17",
+					"task":{"早睡": 1,"早起": 1, "游戏":2, "家务":2, "锻炼":2},
+					"bonus":{}
+				},
+				{
+					"date": "2023-1-16",
+					"task":{"早睡": 1,"早起": 1, "游戏":2, "家务":2, "锻炼":2},
+					"bonus":{}
+				}
+			];
+			return bonus;
 		}
 		
 		function showTips()
 		{
-			sprints = getSprints();
+			var sprints = getSprints();
 			
 			var rand = Math.floor(Math.random() * sprints.length);
 			var name = sprints[rand]["name"];
@@ -30,7 +46,7 @@
 		
 		function showSprint()
 		{
-			sprints = getSprints();
+			var sprints = getSprints();
 				
 			var end = sprints[0]["end"];
 			var name = sprints[0]["name"];
@@ -60,9 +76,20 @@
 			document.getElementById("time").innerHTML = text;
 			//alert(document.getElementById("time").innerHTML);
 		}
+		function showBonus()
+		{
+			var bonus = getBonus();
+			
+			var rand = Math.floor(Math.random() * sprints.length);
+			var name = sprints[rand]["name"];
+			var tips = sprints[rand]["tips"];
+			
+			document.getElementById("tips").innerHTML = name + ":" + tips;
+		}
 		
 		$(function(){
 			showSprint();
+			showBonus();
 			showTips();
 			setInterval(function(){showSprint()}, 1000);
 			setInterval(function(){showTips()}, 5000);
@@ -74,17 +101,19 @@
 </head>
 <body>
     <div style="text-align: center; padding: 80px">
-    	<h1 id="time">14天</h1>
-    	<h2 id="name">软考</h2>
-	<h5 id="tips"></h5>
+    		<h1 id="time">14天</h1>
+    		<h2 id="name">软考</h2>
+	    	<h4 id="task">1/365&uarr1</h4>
+	        <h4 id="bonus">99&uarr1</h4>
+		<h6 id="tips"></h6>
     </div>
     <div style="text-align: center; padding: 1px">
-    	    <h6>DP</h6>
-    	    <h6>Keyboard</h6>
-	    <h6>Kitchen</h6>
-	    <h6>IKEA</h6>
-	    <h6>Option</h6>
-	    <h6>Option+Unreal</h6>
+    	    <h7>DP</h7>
+    	    <h7>Keyboard</h7>
+	    <h7>Kitchen</h7>
+	    <h7>IKEA</h7>
+	    <h7>Option</h7>
+	    <h7>Option+Unreal</h7>
     </div>
 </body>
 <html>
