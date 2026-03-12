@@ -14,3 +14,7 @@
 ### https://chengangdev.github.io/focus/plans
 
 ### https://chengangdev.github.io/focus/sprint
+
+# trader
+
+### https://chengangdev.github.io/focus/trader/dayline510050.json
